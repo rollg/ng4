@@ -1,5 +1,5 @@
 {
-  "name": "ng4 base",
+  "name": "ng4Base",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -7,6 +7,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:coverage": "ng test --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
