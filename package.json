@@ -13,7 +13,10 @@
     "e2e": "ng e2e",
     "build:stat": "ng build --prod --stats-json",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "build:stat:show": "npm run build:prod && npm run build:stat && npm run bundle-report"
+    "build:stat:show": "npm run build:prod && npm run build:stat && npm run bundle-report",
+    "validate": "npm run format && npm run scss-lint && npm run lint && npm run test --single-run=true",
+    "format": "clang-format -i -style=file --glob=src/**/*.ts",
+    "scss-lint": "sass-lint -c -v --max-warnings 0"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +39,7 @@
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
+    "clang-format": "^1.0.52",
     "codelyzer": "~2.0.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
@@ -46,6 +50,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.0",
+    "sass-lint": "^1.10.2",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
