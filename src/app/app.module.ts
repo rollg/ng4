@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
     HttpModule,
 
     /*NOTE: uncomment the following to use material 2 in the project;*/
-    CustomMaterialModule
+    // CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -50,5 +50,8 @@
     "tslint": "~4.5.0",
     "typescript": "~2.2.0",
     "webpack-bundle-analyzer": "2.8.2"
-  }
+  },
+  "main": "main.ts",
+  "repository": "https://github.com/rollg/ng4",
+  "author": "<maildevcom@gmail.com>"
 }
