@@ -11,4 +11,9 @@ describe('angular4 App', () => {
         page.navigateTo();
         expect(page.getParagraphText()).toEqual('app works!');
     });
+
+    it('should find only one h1 element', () => {
+        page.navigateTo();
+        expect(page.getParagraphCount()).toEqual(1);
+    });
 });

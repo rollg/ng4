@@ -8,4 +8,8 @@ export class Angular4Page {
     getParagraphText() {
         return element(by.css('app-root h1')).getText();
     }
+
+    getParagraphCount() {
+        return element.all(by.css('app-root h1')).count();
+    }
 }
