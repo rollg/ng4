@@ -16,7 +16,7 @@
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
     "build:stat:show": "npm run build:prod && npm run build:stat && npm run bundle-report",
     "validate": "npm run format && npm run scss-lint && npm run lint && npm run ci-test",
-    "format": "clang-format -i -style=file --glob=src/**/*.ts",
+    "format": "clang-format -i -style=file --glob=src/**/*.ts && clang-format -i -style=file --glob=e2e/**/*.ts --glob=e2e/**/*.ts",
     "scss-lint": "sass-lint -c -v --max-warnings 0"
   },
   "private": true,
