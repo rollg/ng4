@@ -1,6 +1,6 @@
 import {browser, by, element} from 'protractor';
 
-export class Angular4Page {
+export class DefaultPage {
     navigateTo() {
         return browser.get('/');
     }
@@ -11,5 +11,9 @@ export class Angular4Page {
 
     getParagraphCount() {
         return element.all(by.css('app-root h1')).count();
+    }
+
+    getButtonElement() {
+        return element(by.css('button[type=button]'));
     }
 }

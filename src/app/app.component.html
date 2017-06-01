@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngFor="let elm of elements">
+    <h1>
+      {{elm.title}}
+    </h1>
+</div>
+<button type="button" (click)="addAnotherHeader()">Add another h1</button>
