@@ -6,13 +6,9 @@ import {Component} from '@angular/core';
     styleUrls : [ './app.component.css' ]
 })
 export class AppComponent {
-    public elements = [{
-        title: 'app works!'
-    }];
+    public elements = [ {title : 'app works!'} ];
 
     addAnotherHeader() {
-        this.elements.push({
-            title: 'another title'
-        });
+        this.elements.push({title : 'another title'});
     }
 }

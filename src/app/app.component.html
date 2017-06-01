@@ -4,3 +4,10 @@
     </h1>
 </div>
 <button type="button" (click)="addAnotherHeader()">Add another h1</button>
+
+<nav>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About (lazy)</a>
+</nav>
+
+<router-outlet></router-outlet>

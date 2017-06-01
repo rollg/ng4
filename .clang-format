@@ -17,7 +17,6 @@ AllowShortCaseLabelsOnASingleLine:          false
 AllowShortFunctionsOnASingleLine:           Empty
 AllowShortIfStatementsOnASingleLine:        false
 AllowShortLoopsOnASingleLine:               false
-AlwaysBreakAfterDefinitionReturnType:       false
 AlwaysBreakBeforeMultilineStrings:          true
 AlwaysBreakTemplateDeclarations:            true
 BinPackArguments:                           true
