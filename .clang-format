@@ -28,13 +28,13 @@ BreakConstructorInitializersBeforeComma:    false
 CommentPragmas:                             '^ IWYU pragma:'
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
 ConstructorInitializerIndentWidth:          4
-Cpp11BracedListStyle:                       true
 DerivePointerAlignment:                     false
 DisableFormat:                              false
 ExperimentalAutoDetectBinPacking:           false
 IndentCaseLabels:                           true
 IndentWrappedFunctionNames:                 false
-KeepEmptyLinesAtTheStartOfBlocks:           false
+JavaScriptWrapImports:                      false
+KeepEmptyLinesAtTheStartOfBlocks:           true
 NamespaceIndentation:                       None
 ObjCBlockIndentWidth:                       2
 ObjCSpaceAfterProperty:                     false
