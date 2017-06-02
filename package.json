@@ -14,10 +14,11 @@
     "e2e": "ng e2e",
     "build:stat": "ng build --prod --stats-json",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "build:stat:show": "npm run build:prod && npm run build:stat && npm run bundle-report",
+    "build:stat:show": "npm run build:stat && npm run bundle-report",
     "validate": "npm run format && npm run scss-lint && npm run lint && npm run ci-test",
     "format": "clang-format -i -style=file --glob=src/**/*.ts && clang-format -i -style=file --glob=e2e/**/*.ts --glob=e2e/**/*.ts",
-    "scss-lint": "sass-lint -c -v --max-warnings 0"
+    "scss-lint": "sass-lint -c -v --max-warnings 0",
+    "server-mock": "node server-mock/server.js"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +33,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "lodash": "4.17.4",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -42,8 +44,10 @@
     "@types/node": "~6.0.60",
     "clang-format": "^1.0.52",
     "codelyzer": "~2.0.0",
+    "faker": "4.1.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
+    "json-server": "0.10.1",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
