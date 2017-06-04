@@ -9,7 +9,7 @@ export const ActionTypes = {
 export class Increment implements Action {
     type = ActionTypes.INCREMENT;
 
-    constructor(payload: {someProperty : string, someOtherPropery : boolean}){};
+    constructor(payload: {someProperty: string, someOtherProperty: boolean}) {};
 }
 
 export type Actions = Increment;
