@@ -3,7 +3,7 @@ import {Action, ActionReducer} from '@ngrx/store';
 import {ActionTypes} from '../actions';
 import {initialState, State} from '../state';
 
-export const mainStoreReducer: ActionReducer<State> = (state = initialState, action: Action) => {
+export function mainStoreReducer(state = initialState, action: Action) {
     switch (action.type) {
         case ActionTypes.INCREMENT:
             return {counter : state.counter + 1};
@@ -12,4 +12,4 @@ export const mainStoreReducer: ActionReducer<State> = (state = initialState, act
         default:
             return state;
     }
-};
+}
