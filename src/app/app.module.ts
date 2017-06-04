@@ -3,14 +3,13 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {StoreModule} from '@ngrx/store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 import {AppComponent} from './app.component';
 import {CustomMaterialModule} from './app.material';
 import {AppRoutingModule} from './app.routing';
-
 import {mainStoreReducer} from './state-management/reducers';
-import {StoreModule} from '@ngrx/store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
     declarations : [ AppComponent ],

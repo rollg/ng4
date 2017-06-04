@@ -1,7 +1,5 @@
-export interface State {
-    counter: number;
-}
+export interface State { counter: number; }
 
 export const initialState: State = {
-    counter: 10
+    counter : 10
 };
