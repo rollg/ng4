@@ -8,9 +8,10 @@ describe('HomeComponent', () => {
     let fixture: ComponentFixture<HomeComponent>;
 
     beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            imports: [RouterTestingModule],
-            declarations : [ HomeComponent ]}).compileComponents();
+        TestBed
+            .configureTestingModule(
+                {imports : [ RouterTestingModule ], declarations : [ HomeComponent ]})
+            .compileComponents();
     }));
 
     beforeEach(() => {
@@ -19,7 +20,7 @@ describe('HomeComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('should create home component', () => {
         expect(component).toBeTruthy();
     });
 });
