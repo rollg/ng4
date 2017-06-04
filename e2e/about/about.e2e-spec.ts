@@ -1,6 +1,6 @@
 import {AboutPage} from './about.po';
 
-fdescribe('about route', () => {
+describe('about route', () => {
     const page = new AboutPage();
 
     beforeEach(() => {
