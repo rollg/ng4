@@ -1,5 +1,5 @@
-export interface State { counter: number; }
+import {Counter} from '../../models';
 
-export const initialState: State = {
-    counter : 10
+export const initialState: Counter = {
+    counter: 10
 };

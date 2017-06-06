@@ -5,12 +5,12 @@ import * as mainActions from './state-management/actions/main-state.actions';
 import {State} from './state-management/state';
 
 @Component({
-    selector : 'app-root',
-    templateUrl : './app.component.html',
-    styleUrls : [ './app.component.scss' ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    public elements = [ {title : 'app works!'} ];
+    public elements = [{title: 'app works!'}];
     public dataFromTheStore: string|number = '';
 
     constructor(private store: Store<State>) {
@@ -20,11 +20,11 @@ export class AppComponent {
     }
 
     dispatchIncrement() {
-        this.store.dispatch({type : mainActions.INCREMENT});
+        this.store.dispatch({type: mainActions.INCREMENT});
     }
 
     dispatchEventFromEffect() {
-        this.store.dispatch({type: mainActions.SET_TO_CONST, payload: { constValue: 7 }});
+        this.store.dispatch({type: mainActions.SET_TO_CONST, payload: {constValue: 7}});
     }
 
     dispatchDecrement() {
@@ -32,6 +32,6 @@ export class AppComponent {
     }
 
     addAnotherHeader() {
-        this.elements.push({title : 'another title'});
+        this.elements.push({title: 'another title'});
     }
 }

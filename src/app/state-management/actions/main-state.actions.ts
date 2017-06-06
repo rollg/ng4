@@ -1,26 +1,35 @@
 import {Action} from '@ngrx/store';
 import {type} from '../utils';
 
-export const INCREMENT = type('INCREMENT');
-export const DECREMENT = type('DECREMENT');
-export const SET_TO_CONST = type('SET_TO_CONST');
+export const INCREMENT = type('[Counter] Increment');
+export const DECREMENT = type('[Counter] Decrement');
+export const SET_TO_CONST = type('[Counter] Set To Default Constant');
 
 export class Increment implements Action {
     readonly type = INCREMENT;
 
-    constructor(public payload: {someProperty: string, someOtherProperty: boolean}) {};
+    constructor(public payload: {someProperty: string, someOtherProperty: boolean}) {
+        // dummy const (clang-format issue)
+        const b = 0;
+    };
 }
 
 export class SetToConst implements Action {
     readonly type = SET_TO_CONST;
 
-    constructor(public payload: {constValue: number}) {};
+    constructor(public payload: {constValue: number}) {
+        // dummy const (clang-format issue)
+        const b = 0;
+    };
 }
 
 export class Decrement implements Action {
-    readonly type = DECREMENT;
+    public type = DECREMENT;
 
-    constructor(public payload: { value: number }) {};
+    constructor() {
+        // dummy const (clang-format issue)
+        const b = 0;
+    };
 }
 
 export type Actions = Increment | SetToConst | Decrement;
