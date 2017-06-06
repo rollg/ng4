@@ -10,7 +10,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {AppComponent} from './app.component';
 import {CustomMaterialModule} from './app.material';
 import {AppRoutingModule} from './app.routing';
-import {mainStoreReducer} from './state-management/reducers';
+import {reducer} from './state-management/reducers';
 import {MainEffects} from './state-management/effects';
 
 @NgModule({
@@ -18,7 +18,7 @@ import {MainEffects} from './state-management/effects';
     imports : [
         BrowserAnimationsModule, BrowserModule, FormsModule, HttpModule, AppRoutingModule,
 
-        StoreModule.provideStore(mainStoreReducer),
+        StoreModule.provideStore(reducer),
         // we have to instrument ONLY after importing StoreModule
         StoreDevtoolsModule.instrumentOnlyWithExtension(),
         EffectsModule.run(MainEffects)

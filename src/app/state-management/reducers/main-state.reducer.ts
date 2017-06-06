@@ -1,15 +1,15 @@
-import {Action, ActionReducer} from '@ngrx/store';
-
-import {ActionTypes} from '../actions';
+import * as mainActions from '../actions/main-state.actions';
 import {initialState, State} from '../state';
 
-export function mainStoreReducer(state = initialState, action: Action) {
+export const reducer = (state = initialState, action: mainActions.Actions): State => {
     switch (action.type) {
-        case ActionTypes.INCREMENT:
+        case mainActions.INCREMENT:
             return {counter : state.counter + 1};
-        case ActionTypes.EVENT_FROM_EFFECT:
-            return {counter : 4};
+        case mainActions.SET_TO_CONST:
+            return {counter : action.payload.constValue};
+        case mainActions.DECREMENT:
+            return { counter: state.counter - 1 };
         default:
             return state;
     }
-}
+};

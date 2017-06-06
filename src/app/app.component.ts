@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
 
-import {ActionTypes} from './state-management/actions/main-state.actions';
+import * as mainActions from './state-management/actions/main-state.actions';
 import {State} from './state-management/state';
 
 @Component({
@@ -20,7 +20,15 @@ export class AppComponent {
     }
 
     dispatchIncrement() {
-        this.store.dispatch({type : ActionTypes.INCREMENT});
+        this.store.dispatch({type : mainActions.INCREMENT});
+    }
+
+    dispatchEventFromEffect() {
+        this.store.dispatch({type: mainActions.SET_TO_CONST, payload: { constValue: 7 }});
+    }
+
+    dispatchDecrement() {
+        this.store.dispatch({type: mainActions.DECREMENT, payload: {value: 1}});
     }
 
     addAnotherHeader() {

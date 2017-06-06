@@ -1,15 +1,26 @@
 import {Action} from '@ngrx/store';
 import {type} from '../utils';
 
-export const ActionTypes = {
-    INCREMENT : type('INCREMENT'),
-    EVENT_FROM_EFFECT : type('EVENT_FROM_EFFECT')
-};
+export const INCREMENT = type('INCREMENT');
+export const DECREMENT = type('DECREMENT');
+export const SET_TO_CONST = type('SET_TO_CONST');
 
 export class Increment implements Action {
-    type = ActionTypes.INCREMENT;
+    readonly type = INCREMENT;
 
-    constructor(payload: {someProperty: string, someOtherProperty: boolean}) {};
+    constructor(public payload: {someProperty: string, someOtherProperty: boolean}) {};
 }
 
-export type Actions = Increment;
+export class SetToConst implements Action {
+    readonly type = SET_TO_CONST;
+
+    constructor(public payload: {constValue: number}) {};
+}
+
+export class Decrement implements Action {
+    readonly type = DECREMENT;
+
+    constructor(public payload: { value: number }) {};
+}
+
+export type Actions = Increment | SetToConst | Decrement;
