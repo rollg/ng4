@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
 
 import * as mainActions from './state-management/actions/main-state.actions';
-import {State} from './state-management/state';
+import {Counter} from './models';
 
 @Component({
     selector: 'app-root',
@@ -13,8 +13,8 @@ export class AppComponent {
     public elements = [{title: 'app works!'}];
     public dataFromTheStore: string|number = '';
 
-    constructor(private store: Store<State>) {
-        store.subscribe((data: State) => {
+    constructor(private store: Store<Counter>) {
+        store.subscribe((data: Counter) => {
             this.dataFromTheStore = data.counter;
         });
     }

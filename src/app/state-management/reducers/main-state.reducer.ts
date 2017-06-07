@@ -1,7 +1,8 @@
 import * as mainActions from '../actions/main-state.actions';
-import {initialState, State} from '../state';
+import {initialState} from '../state';
+import {Counter} from '../../models';
 
-export const reducer = (state = initialState, action: mainActions.Actions): State => {
+export const reducer = (state = initialState, action: mainActions.Actions): Counter => {
     switch (action.type) {
         case mainActions.INCREMENT:
             return {counter: state.counter + 1};

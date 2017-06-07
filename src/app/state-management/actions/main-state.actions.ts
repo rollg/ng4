@@ -8,7 +8,7 @@ export const SET_TO_CONST = type('[Counter] Set To Default Constant');
 export class Increment implements Action {
     readonly type = INCREMENT;
 
-    constructor(public payload: {someProperty: string, someOtherProperty: boolean}) {
+    constructor(public payload: {constValue: number}) {
         // dummy const (clang-format issue)
         const b = 0;
     };
@@ -26,7 +26,7 @@ export class SetToConst implements Action {
 export class Decrement implements Action {
     public type = DECREMENT;
 
-    constructor() {
+    constructor(public payload: { constValue: number }) {
         // dummy const (clang-format issue)
         const b = 0;
     };
